@@ -16,3 +16,4 @@ ENV TODO_DB_PATH=/data/todos.db
 
 RUN mkdir -p /data
 
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
