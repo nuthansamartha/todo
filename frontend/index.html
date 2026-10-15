@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+                <h1>My Tasks<span>.</span></h1>
+                <p class="subtitle">Small steps. Big achievements.</p>
+            </div>
+            <div class="date" id="currentDate"></div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total tasks</span>
+                <strong id="totalCount">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Completed</span>
+                <strong id="completedCount">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Remaining</span>
+                <strong id="remainingCount">0</strong>
+            </div>
+        </section>
+
+        <section class="task-panel">
+            <h2>What's on your mind?</h2>
+            <p class="panel-description">Add a task and get things done.</p>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="e.g. Study Python for 30 minutes"
+                    maxlength="200"
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="addButton">+ Add Task</button>
+            </form>
+
+            <p id="message" class="message" role="status"></p>
+
+            <div class="list-header">
+                <h2>Your task list</h2>
+                <span id="taskLabel">0 tasks</span>
+            </div>
+
+            <div id="taskList" class="task-list">
+                <p class="loading">Loading your tasks...</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>Overall progress</span>
+                    <strong id="progressText">0%</strong>
+                </div>
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Stay focused. Keep moving forward.</p>
+        </footer>
+    </main>
+</body>
+</html>
